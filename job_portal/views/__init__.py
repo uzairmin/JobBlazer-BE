@@ -1,0 +1,8 @@
+from job_portal.views.applied_job_detail import AppliedJobDetailsView
+from job_portal.views.applied_job_list import ListAppliedJobView
+from job_portal.views.change_job_status import ChangeJobStatusView
+from job_portal.views.job_detail import JobDetailsView
+from job_portal.views.job_detail import MarkedAsExpiredView
+from job_portal.views.job_upload import JobDataUploadView, JobCleanerView
+from job_portal.views.manual_job_upload import ManualJobUploadView
+from job_portal.views.jobs_trending_stats import JobsTrendingStats

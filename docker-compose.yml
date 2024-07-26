@@ -1,0 +1,40 @@
+version: '3.7'
+
+services:
+  djangogunicorn:
+    volumes:
+      - static:/static
+    env_file:
+      - .env
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=djangogunicorn:8000
+    networks:
+      - mynetwork
+  rabbitmq:
+    image: "rabbitmq:3.8-management"
+    ports:
+      - "5672:5672"  # RabbitMQ default port for AMQP
+      - "15672:15672"  # RabbitMQ Management Console
+    networks:
+      - mynetwork
+  nginx:
+    build: ./nginx
+    volumes:
+      - static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - djangogunicorn
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  static:
