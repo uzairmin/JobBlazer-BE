@@ -17,11 +17,11 @@ Be sure, you have installed following dependenices installed on your development
 
 ### Installation:
 
-To install Octagon on your local machine, follow these steps:
+To install JobBlazer on your local machine, follow these steps:
 
-#### 1. Clone the Octagon BE repository:
+#### 1. Clone the JobBlazer BE repository:
 
-    git clone https://github.com/Devsinc-Org/Octagon-BE
+    git clone https://github.com/Devsinc-Org/JobBlazer-BE
 
 #### 2. Familiarize yourself with the following files and directories:
 
@@ -38,7 +38,7 @@ To install Octagon on your local machine, follow these steps:
 
 ### Usage
 
-To use Octagon, follow these steps:
+To use JobBlazer, follow these steps:
 
 #### 1. Create and activate virtual environment
 
